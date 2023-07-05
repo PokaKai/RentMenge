@@ -1,0 +1,151 @@
+﻿@model rent.Models.Rent
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h2>新增房屋</h2>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.address, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.address, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.top_region, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.top_region, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.top_region, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.sub_region, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.sub_region, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.sub_region, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.monthly_price, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.monthly_price, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.monthly_price, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.floor, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.floor, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.floor, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @* 租屋類型 (DropDownList) *@
+    <div class="form-group">
+        @Html.LabelFor(model => model.property_type, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("property_type", new SelectList(new[] { "雅房", "獨立套房", "整層住家", "分租套房", "其他", "Null" }))
+        </div>
+    </div>
+
+    @* 房屋類型 (DropDownList)*@
+    <div class="form-group">
+        @Html.LabelFor(model => model.building_type, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("property_type", new SelectList(new[] { "公寓", "透天", "電梯大樓", "別墅", "其他", "Null" }))
+        </div>34135377
+    </div>
+
+    @* 押金 *@
+    <div class="form-group">
+        @Html.LabelFor(model => model.deposit, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.deposit, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.deposit, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @* 額外網路費 (RadioButton) *@
+    <div class="form-group">
+        @Html.LabelFor(model => model.additional_fee_internet, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.RadioButton("additional_fee_internet", "需要", true)需要
+            @Html.RadioButton("additional_fee_internet", "不需要", true)不需要
+        </div>
+    </div>
+
+    @* 額外水費 (RadioButton) *@
+    <div class="form-group">
+        @Html.LabelFor(model => model.additional_fee_water, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.RadioButton("additional_fee_water", "需要", true)需要
+            @Html.RadioButton("additional_fee_water", "不需要", true)不需要
+        </div>
+    </div>
+
+    @* 可否養寵物 (RadioButton) *@
+    <div class="form-group">
+        @Html.LabelFor(model => model.allow_pet, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.RadioButton("allow_pet", "可", true)可
+            @Html.RadioButton("allow_pet", "不可", true)不可
+        </div>
+    </div>
+
+    @* 可否煮飯 (RadioButton) *@
+    <div class="form-group">
+        @Html.LabelFor(model => model.can_cook, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.RadioButton("can_cook", "可", true)可
+            @Html.RadioButton("can_cook", "不可", true)不可
+        </div>
+    </div>
+
+    @* 有無冰箱 (RadioButton) *@
+    <div class="form-group">
+        @Html.LabelFor(model => model.facilities_refrigerator, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.RadioButton("facilities_refrigerator", "有", true)有
+            @Html.RadioButton("facilities_refrigerator", "無", true)無
+            @Html.RadioButton("facilities_refrigerator", "NULL", true)NULL
+        </div>
+    </div>
+
+    @* 性別 (RadioButton) *@
+    <div class="form-group">
+        @Html.LabelFor(model => model.gender_restriction, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.RadioButton("gender_restriction", "限女", true)限女
+            @Html.RadioButton("gender_restriction", "限男", true)限男
+            @Html.RadioButton("gender_restriction", "不限", true)不限
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

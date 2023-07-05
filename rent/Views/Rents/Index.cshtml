@@ -1,0 +1,65 @@
+﻿@using PagedList
+@using PagedList.Mvc
+
+@model IPagedList<rent.Models.Rent>
+
+@{
+    ViewBag.Title = "Index";
+}
+@Html.ActionLink("Create", "Create")
+@using (Html.BeginForm())
+{
+<p>
+    縣市: @Html.DropDownList("rentGender", "All")
+    地址: @Html.TextBox("searchString")
+    <input type="submit" value="查詢" />
+</p>
+}
+
+
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+
+<table class="table table-striped table-bordered table-hover">
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(item.address, "Details", "Search", new { id = item.ID, @class = "myclass;" }, null /* html attributes */)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.top_region)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sub_region)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.monthly_price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.floor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.property_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.building_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bathroom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bedroom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.livingroom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_floor)
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.PagedListPager(Model, page => Url.Action("index", new { page }));

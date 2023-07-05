@@ -1,0 +1,328 @@
+﻿@model rent.Models.Rent
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Rent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.top_region)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.top_region)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sub_region)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sub_region)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.monthly_price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.monthly_price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.floor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.floor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.property_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.property_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.building_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.building_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.deposit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deposit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.additional_fee_internet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.additional_fee_internet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.additional_fee_water)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.additional_fee_water)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.allow_pet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.allow_pet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.can_cook)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.can_cook)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.facilities_refrigerator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.facilities_refrigerator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.facilities_Airconditioner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.facilities_Airconditioner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.facilities_washing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.facilities_washing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.facilities_heater)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.facilities_heater)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.facilities_internet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.facilities_internet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.facilities_tv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.facilities_tv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.floor_ping)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.floor_ping)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gender_restriction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gender_restriction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.has_parking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.has_parking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_require_management_fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_require_management_fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_require_parking_fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_require_parking_fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.living_functions_conv_store)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.living_functions_conv_store)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.living_functions_hospital)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.living_functions_hospital)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.living_functions_park)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.living_functions_park)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.living_functions_school)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.living_functions_school)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bathroom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bathroom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bedroom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bedroom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.livingroom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.livingroom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.latitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.longitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.longitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.total_floor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_floor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MRT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MRT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone_num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone_num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.houseimage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.houseimage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.click_times)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.click_times)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.heart_times)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.heart_times)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

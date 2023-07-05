@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-nav">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand " style="color:#ac796e" href="~/Home/Index">
+                <img src="~/images/house.svg" alt="logo" width="40" height="30">
+                租屋管理系統
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:#ac796e" href="~/Search/Index">快速搜尋</a>
+                        
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" style="color:#ac796e" href="http://192.168.235.119:8080">地圖找房</a>
+                    </li>
+                </ul>
+
+                <div class="btn-sign">
+                    @Html.Partial("_LoginPartial")
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+
+
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/49bf4ba205.js" crossorigin="anonymous"></script>
+    <script src="~/Scripts/my.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+﻿@model rent.Models.Rent
+@{
+    ViewBag.Title = "Details";
+}
+@{
+    var imageID = "https://raw.githubusercontent.com/PokaKai/rent_photo/main/" + Model.ID+ ".webp";
+}
+
+
+<div data-bs-spy="scroll" data-bs-target="#sideNav" data-bs-offset="0" tabindex="0" class="scrollspyArea">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-7">
+                <div id="div-show">
+                    <img id="show" class="zoom" src=@imageID  data-big=@imageID alt="">
+                </div>
+                <div id="div-cont" class="d-block">
+                    <div id="div-select"></div>
+                    <div id="btnPrev"></div>
+                    <div id="btnNext"></div>
+                </div>
+            </div>
+            <div class="col-md-5 d-block">
+                <h2 class="pt-sm-5 pt-md-2 mt-sm-5 mt-md-2">房屋資訊</h2>
+                <div class="content-wrapper">
+                    <div class="content">
+                        <ul>
+
+                            <li class="list_info">
+                                <span class="title h4">地址: </span>
+                                @Html.DisplayFor(model => model.address)
+                            </li>
+                            <li class="list_info">
+                                <span class="title h4">坪 數: </span>
+                                @Html.DisplayFor(model => model.floor_ping)
+                            </li>
+                            <li class="list_info">
+                                <span class="title h4">押 金: </span>
+                                @Html.DisplayFor(model => model.deposit)
+                            </li>
+                            <li class="list_info">
+                                <span class="title h4">其他費用: </span>
+                                <span class="value h5"> 水費|電費</span>
+                            </li>
+                            <li class="list_info">
+                                <span class="title h4">樓 層: </span>
+                                @Html.DisplayFor(model => model.floor)
+                            </li>
+                            <li class="list_info">
+                                <span class="title h4">租 金: </span>
+                                @Html.DisplayFor(model => model.monthly_price)
+                            </li>
+                            <li>
+                                @Html.HiddenFor(x => x.ID, new { id = "HiddenID" })
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Landlord-Information container py-3">
+                    <div class="Landlord-pic">
+                        <img src="http://fakeimg.pl/30x30" alt="">
+                    </div>
+                    <h2>
+                        屋主 :
+                        <span class="h2">郭先生</span>
+                    </h2>
+                    <div class="contact-method d-grid gap-3 p-3">
+                        <a href="tel:+886-918******" class="h3 btn btn-warning">0918-563-742</a>
+                        <a href="https://line.me/ti/p/JriLIfkCeE" class="btn btn-Line" type="button">Line聯絡</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <section id="service" class="service d-block">
+                    <div class="h2 mt-4">房屋設備</div>
+                    <div class="service-list-box mt-4">
+                        <div class="service-list-items">
+                            <img src="~/images/equipment_icon/refrigerator.png">
+                            <div class="text">冰箱</div>
+                        </div>
+                        <div class="service-list-items">
+                            <img src="~/images/equipment_icon/airconditioning.png">
+                            <div class="text">冷氣</div>
+                        </div>
+                        <div class="service-list-items">
+                            <img src="~/images/equipment_icon/washingmachine.png">
+                            <div class="text">洗衣機</div>
+                        </div>
+                        <div class="service-list-items">
+                            <img src="~/images/equipment_icon/heater.png">
+                            <div class="text">熱水器</div>
+                        </div>
+                        <div class="service-list-items">
+                            <img src="~/images/equipment_icon/wifi.png" alt="">
+                            <div class="text">網路</div>
+                        </div>
+                        <div class="service-list-items">
+                            <img src="~/images/equipment_icon/tv.png" alt="">
+                            <div class="text">電視</div>
+                        </div>
+                    </div>
+                    <div class="h2 mt-4">附近設施</div>
+                    <div class="service-list-box mt-4 mb-4">
+                        <div class="service-list-items">
+                            <img src="~/images/equipment_icon/hospital.png" alt="">
+                            <div class="text">醫院</div>
+                        </div>
+                        <div class="service-list-items">
+                            <img src="~/images/equipment_icon/park.png" alt="">
+                            <div class="text">公園</div>
+                        </div>
+                        <div class="service-list-items">
+                            <img src="~/images/equipment_icon/school.png" alt="">
+                            <div class="text">學校</div>
+                        </div>
+                        <div class="service-list-items">
+                            <img src="~/images/equipment_icon/shop.png" alt="">
+                            <div class="text">商店</div>
+                        </div>
+                        <div class="service-list-items">
+                            <img src="~/images/equipment_icon/parking.png" alt="">
+                            <div class="text">停車場</div>
+                        </div>
+                    </div>
+                </section>
+                <div id="disqus_thread"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("回上一頁", "Index")
+</p>
+
+
+
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-localhost-44332.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.language = "zh_TW";
+    };
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

@@ -1,0 +1,484 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="hero-image d_b-md">
+    <div class="hero-text d-flex d_b-md">
+        <div class="hero-search-bg d_b-md"></div>
+        <div class="search-bg d_b-md"></div>
+        <div class="h2">
+            尋找合適的房子
+            <a href="http://192.168.235.119:8080" class="btn btn-outline-success" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="hover focus" data-bs-content="地圖找房">
+                <i class="fas fa-map-marked-alt" style="color:#21bd35;">地圖找房</i>
+            </a>
+        </div>
+        <div class="input-group mt-2 mb-3">
+            <button class="dropdown btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenu2"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                桃園市
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button">龜山區</button></li>
+                <li><button class="dropdown-item" type="button">桃園區</button></li>
+                <li><button class="dropdown-item" type="button">中壢區</button></li>
+            </ul>
+            <input class="form-control" type="search" placeholder="Enter address" aria-label="Search">
+            <button class="btn btn-outline-light" type="button" id="button-addon1">搜尋</button>
+        </div>
+    </div>
+</div>
+<div data-bs-spy="scroll" data-bs-target="#sideNav" data-bs-offset="0" tabindex="0" class="scrollspyArea">
+    <div class="input-group mt-2 mb-3 d-md-none ">
+        <button class="dropdown btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenu2"
+                data-bs-toggle="dropdown" aria-expanded="false">
+            台北市
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <li><button class="dropdown-item" type="button">Action</button></li>
+            <li><button class="dropdown-item" type="button">Another action</button></li>
+            <li><button class="dropdown-item" type="button">Something else here</button></li>
+        </ul>
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-dark" type="button" id="button-addon1">搜尋</button>
+    </div>
+
+    <div id="sideNav" class="list-group sideNav sideNav-md-block">
+        <a class="list-group-item list-group-item-action h6" href="#popular">熱門</a>
+        <a class="list-group-item list-group-item-action h6" href="#favorite">喜歡</a>
+        <a class="list-group-item list-group-item-action h6" href="#convenient">方便</a>
+        <a class="list-group-item list-group-item-action h6" href="#feature">特色</a>
+    </div>
+
+    <div class="recommend container px-5 mt-4">
+        <h2 id="popular" class="my-2 mt-md-0">最熱門</h2>
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/1.webp" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                        <label>
+                            <input type="checkbox" class="heart_checked" name="" id="">
+                            <span class="fas fa-heart heart fs-4"></span>
+                        </label>
+                        <h5 class="card-title">台北市松山區南京東路五段70號10號</h5>
+                        <p class="card-text">電梯大樓/6F</p>
+                        <span class="card-price">25000 元 / 月</span>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/6.webp" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                        <label>
+                            <input type="checkbox" class="heart_checked" name="" id="">
+                            <span class="fas fa-heart heart fs-4"></span>
+                        </label>
+                        <h5 class="card-title">台北市中山區林森北路399巷28號</h5>
+                        <p class="card-text">電梯大樓/3F</p>
+                        <span class="card-price">18800 元 / 月</span>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/19.webp" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                        <label>
+                            <input type="checkbox" class="heart_checked" name="" id="">
+                            <span class="fas fa-heart heart fs-4"></span>
+                        </label>
+                        <h5 class="card-title">台北市中山區長春路338號</h5>
+                        <p class="card-text">電梯大樓/7F </p>
+                        <span class="card-price">11500 元 / 月</span>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-none d-lg-block">
+                <div class="card h-100">
+                    <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/16.webp" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                        <label>
+                            <input type="checkbox" class="heart_checked" name="" id="">
+                            <span class="fas fa-heart heart fs-4"></span>
+                        </label>
+                        <h5 class="card-title">台北市中山區民生東路三段8號</h5>
+                        <p class="card-text">公寓/3F</p>
+                        <span class="card-price">13000 元 / 月</span>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 mx-auto d-flex justify-content-center">
+            <button type="button" class="moreInfo btn-sm btn-outline-brown">查看更多資料</button>
+        </div>
+        <hr>
+
+        <h2 id="favorite" class="mt-5 mb-3">最喜歡</h2>
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 pb-2">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/21.webp" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                        <label>
+                            <input type="checkbox" class="heart_checked" name="" id="">
+                            <span class="fas fa-heart heart fs-4"></span>
+                        </label>
+                        <h5 class="card-title">桃園市中壢區立和路2號</h5>
+                        <p class="card-text">電梯大樓/7樓</p>
+                        <span class="card-price">15000元 / 月</span>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/26.webp" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                        <label>
+                            <input type="checkbox" class="heart_checked" name="" id="">
+                            <span class="fas fa-heart heart fs-4"></span>
+                        </label>
+                        <h5 class="card-title">台北市士林區中山北路六段822號</h5>
+                        <p class="card-text">分租套房/5樓</p>
+                        <span class="card-price">16000元 / 月</span>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/31.webp" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                        <label>
+                            <input type="checkbox" class="heart_checked" name="" id="">
+                            <span class="fas fa-heart heart fs-4"></span>
+                        </label>
+                        <h5 class="card-title">台北市士林區和豐街42-3號</h5>
+                        <p class="card-text">獨立套房/3樓</p>
+                        <span class="card-price">11000元 / 月</span>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-none d-lg-block">
+                <div class="card h-100">
+                    <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/36.webp" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                        <label>
+                            <input type="checkbox" class="heart_checked" name="" id="">
+                            <span class="fas fa-heart heart fs-4"></span>
+                        </label>
+                        <h5 class="card-title">桃園市龜山區文化二路259號</h5>
+                        <p class="card-text">電梯大樓/6樓</p>
+                        <span class="card-price">23000元 / 月</span>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 mx-auto d-flex justify-content-center">
+            <button type="button" class="moreInfo btn-sm btn-outline-brown">查看更多資料</button>
+        </div>
+        <hr>
+
+
+        <h2 id="convenient" class="mt-5 mb-3">最方便</h2>
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 pb-2">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/41.webp" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                        <label>
+                            <input type="checkbox" class="heart_checked" name="" id="">
+                            <span class="fas fa-heart heart fs-4"></span>
+                        </label>
+                        <h5 class="card-title">台北市大安區永康街8巷5-1號</h5>
+                        <p class="card-text">公寓/4F</p>
+                        <span class="card-price">12500 元 / 月</span>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/2.webp" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                        <label>
+                            <input type="checkbox" class="heart_checked" name="" id="">
+                            <span class="fas fa-heart heart fs-4"></span>
+                        </label>
+                        <h5 class="card-title">台北市內湖區民權東路六段146號</h5>
+                        <p class="card-text">電梯大樓/12F</p>
+                        <span class="card-price">22000 元 / 月</span>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/7.webp" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                        <label>
+                            <input type="checkbox" class="heart_checked" name="" id="">
+                            <span class="fas fa-heart heart fs-4"></span>
+                        </label>
+                        <h5 class="card-title">台北市松山區寶清街18-2號</h5>
+                        <p class="card-text">電梯大樓/11F</p>
+                        <span class="card-price">18000 元 / 月</span>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-none d-lg-block">
+                <div class="card h-100">
+                    <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/12.webp" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                        <label>
+                            <input type="checkbox" class="heart_checked" name="" id="">
+                            <span class="fas fa-heart heart fs-4"></span>
+                        </label>
+                        <h5 class="card-title">台北市大安區仁愛路30巷31弄5號</h5>
+                        <p class="card-text">電梯大樓/8F</p>
+                        <span class="card-price">7800 元 / 月</span>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 mx-auto d-flex justify-content-center">
+            <button type="button" class="moreInfo btn-sm btn-outline-brown">查看更多資料</button>
+        </div>
+        <hr>
+
+        <h2 id="feature" class="mt-5 mb-3">特色房</h2>
+        <div class="featureTab pb-3">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link flex-fill active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                    鄰近捷運
+                </button>
+                <button class="nav-link flex-fill" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                        type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                    特色美食
+                </button>
+                <button class="nav-link flex-fill" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
+                    可養寵物
+                </button>
+            </div>
+        </div>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 pb-2">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/2.webp" class="card-img-top w-100" alt="...">
+                            <div class="card-body">
+                                <label>
+                                    <input type="checkbox" class="heart_checked" name="" id="">
+                                    <span class="fas fa-heart heart fs-4"></span>
+                                </label>
+                                <h5 class="card-title">桃園市桃園區春日路272號</h5>
+                                <p class="card-text">公寓/5F</p>
+                                <span class="card-price">12500 元 / 月</span>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/43.webp" class="card-img-top w-100" alt="...">
+                            <div class="card-body">
+                                <label>
+                                    <input type="checkbox" class="heart_checked" name="" id="">
+                                    <span class="fas fa-heart heart fs-4"></span>
+                                </label>
+                                <h5 class="card-title">桃園市八德區建德長興路口334號</h5>
+                                <p class="card-text">電梯大樓/13F</p>
+                                <span class="card-price">19000 元 / 月</span>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/7.webp" class="card-img-top w-100" alt="...">
+                            <div class="card-body">
+                                <label>
+                                    <input type="checkbox" class="heart_checked" name="" id="">
+                                    <span class="fas fa-heart heart fs-4"></span>
+                                </label>
+                                <h5 class="card-title">桃園市桃園區中正路876巷30號</h5>
+                                <p class="card-text">電梯大樓/11F</p>
+                                <span class="card-price">16000 元 / 月</span>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-lg-block">
+                        <div class="card h-100">
+                            <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/12.webp" class="card-img-top w-100" alt="...">
+                            <div class="card-body">
+                                <label>
+                                    <input type="checkbox" class="heart_checked" name="" id="">
+                                    <span class="fas fa-heart heart fs-4"></span>
+                                </label>
+                                <h5 class="card-title">桃園市八德區高城七街5巷13號</h5>
+                                <p class="card-text">公寓/5F</p>
+                                <span class="card-price">3999 元 / 月</span>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 mx-auto d-flex justify-content-center">
+                    <button type="button" class="moreInfo btn-sm btn-outline-brown">查看更多資料</button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 pb-2">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/17.webp" class="card-img-top w-100" alt="...">
+                            <div class="card-body">
+                                <label>
+                                    <input type="checkbox" class="heart_checked" name="" id="">
+                                    <span class="fas fa-heart heart fs-4"></span>
+                                </label>
+                                <h5 class="card-title">桃園市中壢區中山東路一段3巷9弄9號</h5>
+                                <p class="card-text">電梯大樓/7F</p>
+                                <span class="card-price">8000 元 / 月</span>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/22.webp" class="card-img-top w-100" alt="...">
+                            <div class="card-body">
+                                <label>
+                                    <input type="checkbox" class="heart_checked" name="" id="">
+                                    <span class="fas fa-heart heart fs-4"></span>
+                                </label>
+                                <h5 class="card-title">桃園市桃園區春日路1314巷17號</h5>
+                                <p class="card-text">電梯大樓/7F</p>
+                                <span class="card-price">19000 元 / 月</span>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/42.webp" class="card-img-top w-100" alt="...">
+                            <div class="card-body">
+                                <label>
+                                    <input type="checkbox" class="heart_checked" name="" id="">
+                                    <span class="fas fa-heart heart fs-4"></span>
+                                </label>
+                                <h5 class="card-title">台北市松山區南京東路五段98號</h5>
+                                <p class="card-text">電梯大樓/2F</p>
+                                <span class="card-price">10000 元 / 月</span>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-lg-block">
+                        <div class="card h-100">
+                            <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/27.webp" class="card-img-top w-100" alt="...">
+                            <div class="card-body">
+                                <label>
+                                    <input type="checkbox" class="heart_checked" name="" id="">
+                                    <span class="fas fa-heart heart fs-4"></span>
+                                </label>
+                                <h5 class="card-title">台北市士林區中山北路六段822號</h5>
+                                <p class="card-text">電梯大樓/5F</p>
+                                <span class="card-price">16000 元 / 月</span>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 mx-auto d-flex justify-content-center">
+                    <button type="button" class="moreInfo btn-sm btn-outline-brown">查看更多資料</button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 pb-2">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://raw.githubusercontent.com/PokaKai/rent_photo/main/32.webp" class="card-img-top w-100" alt="...">
+                            <div class="card-body">
+                                <label>
+                                    <input type="checkbox" class="heart_checked" name="" id="">
+                                    <span class="fas fa-heart heart fs-4"></span>
+                                </label>
+                                <h5 class="card-title">台北市北投區致遠三路147巷2弄36號</h5>
+                                <p class="card-text">電梯大樓/6F</p>
+                                <span class="card-price">18000 元 / 月</span>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="/images/picture/20211010_10.jpg" class="card-img-top w-100" alt="...">
+                            <div class="card-body">
+                                <label>
+                                    <input type="checkbox" class="heart_checked" name="" id="">
+                                    <span class="fas fa-heart heart fs-4"></span>
+                                </label>
+                                <h5 class="card-title">台北市信義區吳興街284巷20弄54號</h5>
+                                <p class="card-text">公寓/3F</p>
+                                <span class="card-price">13000 元 / 月</span>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="/images/picture/20211010_11.jpg" class="card-img-top w-100" alt="...">
+                            <div class="card-body">
+                                <label>
+                                    <input type="checkbox" class="heart_checked" name="" id="">
+                                    <span class="fas fa-heart heart fs-4"></span>
+                                </label>
+                                <h5 class="card-title">台北市大安區信義路二段198巷42號</h5>
+                                <p class="card-text">電梯大樓/5F</p>
+                                <span class="card-price">25000 元 / 月</span>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-lg-block">
+                        <div class="card h-100">
+                            <img src="/images/picture/20211010_12.jpg" class="card-img-top w-100" alt="...">
+                            <div class="card-body">
+                                <label>
+                                    <input type="checkbox" class="heart_checked" name="" id="">
+                                    <span class="fas fa-heart heart fs-4"></span>
+                                </label>
+                                <h5 class="card-title">台北市文山區木新路三段332號</h5>
+                                <p class="card-text">公寓/3F</p>
+                                <span class="card-price">7500 元 / 月</span>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 mx-auto d-flex justify-content-center">
+                    <button type="button" class="moreInfo btn-sm btn-outline-brown">查看更多資料</button>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
